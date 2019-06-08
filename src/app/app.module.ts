@@ -10,7 +10,7 @@ import { FullLayoutComponent} from './layout/full-layout.component';
 import {Ng2AutoBreadCrumb} from "ng2-auto-breadcrumb";
 import {Ng2NewsListComponent} from "./components/ng2-newslist/ng2newslist.component";
 import { UserComponent } from './user/user.component';
-
+import { RouterModule,Routes} from '@angular/router';
 
 @NgModule({
   imports: [
@@ -22,7 +22,7 @@ import { UserComponent } from './user/user.component';
   declarations: [
     FullLayoutComponent,
     AppComponent,
-    UserComponent
+    
   ],
   providers: [{
     provide: LocationStrategy,

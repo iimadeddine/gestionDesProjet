@@ -1,3 +1,71 @@
-<p>
-  user works!
-</p>
+<div class="row">
+    <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4">
+      <div class="login-panel panel panel-default">
+        <div class="panel-heading">Register</div>
+        <div class="panel-body">
+          <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+            <fieldset>
+              <div class="form-group">
+                <input [formControl]="fname" class="form-control" placeholder="Nom" type="text" autofocus="" required>
+              </div>
+              <div class="form-group">
+                <input [formControl]="lname" class="form-control" placeholder="Prenom" type="text" autofocus="" required>
+              </div>
+              <div class="form-group">
+                  <input [formControl]="phone" class="form-control" placeholder="Telephone" type="email" autofocus="">
+                </div>
+                <div class="form-group">
+                    <input [formControl]="matricule" class="form-control" placeholder="Matricule" type="email" autofocus="">
+                  </div>
+              <div class="form-group">
+                <input [formControl]="email" class="form-control" placeholder="E-mail" type="email" autofocus="">
+              </div>
+              <div class="form-group">
+                <input [formControl]="password" class="form-control" placeholder="Password" type="password" value="">
+              </div>
+              <div class="form-group">
+                  <select class="form-control">
+                      <option disabled>-Choisir un profil-</option>
+                      <option>Devlopper</option>
+                      <option>designer</option>
+                      <option>tester</option>
+                  </select>
+              </div>
+              <button [disabled]="!form.valid" type="submit" class="btn btn-primary">Register</button>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div><!-- /.col-->
+  </div><!-- /.row -->
+  
+  
+          <div class="panel-body">
+              <table class="table">
+                  <thead class="thead-dark">
+                    <tr>
+                      <th scope="col">id</th>
+                      <th scope="col">Nom </th>
+                      <th scope="col">Prenom</th>
+                      <th scope="col">Telephone</th>
+                      <th scope="col">Matricule</th>
+                      <th scope="col">E-mail</th>
+                      <th scope="col">Modifier</th>
+                      <th scope="col">Suprimer</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Aresmouk</td>
+                      <td>Fati</td>
+                      <td>06 0606060</td>
+                      <td>1ed2548</td>
+                      <td>pares@gmail.com</td>
+                      <td><button type="button" class="btn btn-warning">Modifier</button></td>
+                      <td><button type="button" class="btn btn-danger">Suprimer</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+          
+  

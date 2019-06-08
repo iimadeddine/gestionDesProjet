@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {FullLayoutComponent} from "./layout/full-layout.component";
 
+
 // Layouts
 export const routes: Routes = [
   {
@@ -23,6 +24,7 @@ export const routes: Routes = [
     data: {
       title: 'Home'
     },
+    
     children: [
       {
         path: 'dashboard',
@@ -30,6 +32,10 @@ export const routes: Routes = [
         data:{
           title2:"Dashboard"
         }
+      },
+      {
+        path: 'user',
+        loadChildren: './user/user.module#UserModule'
       },
       {
         path: 'form',
