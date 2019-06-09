@@ -42,6 +42,10 @@ export const routes: Routes = [
         loadChildren: './form/form.module#FormModule'
       },
       {
+        path: 'profil',
+        loadChildren: './profil/profil.module#ProfilModule'
+      },
+      {
         path:'widget',
         children:[
           {
